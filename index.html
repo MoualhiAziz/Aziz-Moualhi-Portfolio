@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+
+  <title>Aziz Moualhi | Engineering Student &amp; AI Enthusiast</title>
+  <meta name="keywords" content="Aziz Moualhi, engineering, AI, machine learning, industrial maintenance, embedded systems, robotics, portfolio" />
+  <meta name="description" content="Aziz Moualhi — Engineering Student & AI Enthusiast. Portfolio of ML, industrial maintenance, embedded control and renewable energy projects." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- **** Navbar **** -->
+  <nav class="navbar">
+    <div class="container navbar__wrapper">
+      <a href="#hero" class="navbar__logo">AM<span>.</span></a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="assets/resume.pdf" target="_blank" rel="noreferrer" class="cta-btn cta-btn--nav">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /END Navbar -->
+
+  <!-- **** Hero Section **** -->
+  <section id="hero" class="jumbotron">
+    <div class="container hero__inner">
+      <p class="hero-eyebrow load-hidden">Engineering Student &middot; INSAT</p>
+      <h1 class="hero-title load-hidden">
+        Hi, I'm <span class="text-color-main">Aziz Moualhi</span>
+        <br />
+        I design intelligent engineering systems.
+      </h1>
+      <p class="hero-subtitle load-hidden">
+        I work at the intersection of machine learning, industrial maintenance,
+        embedded control, and renewable energy — turning sensor data and CAD models
+        into systems that detect, predict, and prevent failure.
+      </p>
+      <p class="hero-cta load-hidden">
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#projects">See my work</a>
+        <a rel="noreferrer" class="cta-btn cta-btn--ghost" href="#contact">Get in touch</a>
+      </p>
+    </div>
+  </section>
+  <!-- /END Hero Section -->
+
+  <!-- **** About Section **** -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title load-hidden">About me</h2>
+      <div class="row about-wrapper">
+        <div class="col-md-6 col-sm-12">
+          <div class="about-wrapper__image load-hidden">
+            <img
+              alt="Profile picture of Aziz Moualhi"
+              class="img-fluid rounded shadow-lg"
+              src="assets/profile.jpg"
+            />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="about-wrapper__info load-hidden">
+            <p class="about-wrapper__info-text">
+              I'm an Industrial Instrumentation and Maintenance engineering student at the
+              <strong>National Institute of Applied Science and Technology (INSAT)</strong>.
+              I build end-to-end systems that combine deep learning, computer vision, and
+              hands-on mechanical and industrial engineering — from drone-based solar panel
+              inspection to predictive maintenance for aircraft engines.
+            </p>
+            <p class="about-wrapper__info-text">
+              I've applied this across academic projects, personal builds, and two engineering
+              internships, working with tools like PyTorch, YOLO, Fusion 360, and industrial ERP
+              systems. I'm currently looking for research and engineering internship opportunities
+              (including programs like <strong>Mitacs</strong>) where I can keep working on
+              applied AI for industrial and energy systems.
+            </p>
+            <span class="d-flex mt-3 about-wrapper__links">
+              <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="assets/resume.pdf">
+                View Resume
+              </a>
+              <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE">
+                LinkedIn Profile
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /END About Section -->
+
+  <!-- **** Projects Section **** -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title load-hidden">Academic &amp; Personal Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text load-hidden">
+            <span class="project-tag">Academic project &middot; Spring 2026</span>
+            <h3 class="project-wrapper__text-title">SolarGuard AI</h3>
+            <p class="project-subtitle">Smart Inspection of Solar Power Plants Using Drones and AI</p>
+            <p class="mb-4">
+              An end-to-end automated inspection system for photovoltaic power plants,
+              combining drone imagery and deep learning. Processes RGB and thermal aerial
+              images to detect and classify panel defects in real time through a Flask dashboard.
+            </p>
+            <ul class="project-highlights">
+              <li>ResNet18 classifier (99.92% accuracy) routes images to the right detection model</li>
+              <li>YOLOv8 thermal defect detection — 8 fault classes — mAP@0.5: 74.8%</li>
+              <li>YOLOv11 RGB surface defect detection — 4 classes — mAP@0.5: 87.7%</li>
+              <li>Dashboard: bounding boxes, confidence scores, severity levels, maintenance recommendations</li>
+            </ul>
+            <p class="project-stack"><strong>Stack:</strong> Python, PyTorch, Ultralytics YOLO, Flask, Torchvision</p>
+            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
+              Google Drive Demo
+            </a>
+            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
+              Source Code
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image load-hidden">
+            <a rel="noreferrer" href="#!" target="_blank">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                <img alt="SolarGuard AI dashboard preview" class="img-fluid" src="assets/project-solarguard.jpg" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /END Project 1 -->
+
+      <!-- Project 2 -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text load-hidden">
+            <span class="project-tag">Personal project &middot; Summer 2025</span>
+            <h3 class="project-wrapper__text-title">Industrial Defect Inspection</h3>
+            <p class="project-subtitle">CNN Autoencoder + Explainable Heatmaps</p>
+            <p class="mb-4">
+              An unsupervised CNN autoencoder trained only on normal (defect-free) data.
+              Detects defects via reconstruction error with an explainable heatmap overlay,
+              and uses z-score calibration for production-ready PASS / REVIEW / FAIL decisions.
+            </p>
+            <ul class="project-highlights">
+              <li>Scoring: top-k pooling (top 1% of pixels) for small, localized defects</li>
+              <li>Explainability: per-pixel MAE heatmap overlay (OpenCV JET colormap)</li>
+              <li>Decision logic: PASS z&lt;2 &middot; REVIEW 2≤z&lt;4 &middot; FAIL z≥4</li>
+              <li>Deployed as a Flask web UI with real-time inference</li>
+            </ul>
+            <p class="project-stack"><strong>Stack:</strong> Python, TensorFlow/Keras, OpenCV, NumPy, Flask, Git</p>
+            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
+              See Live
+            </a>
+            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
+              Source Code
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image load-hidden">
+            <a rel="noreferrer" href="#!" target="_blank">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                <img alt="Defect inspection heatmap preview" class="img-fluid" src="assets/project-defect.jpg" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /END Project 2 -->
+
+      <!-- Project 3 -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text load-hidden">
+            <span class="project-tag">Academic project &middot; Spring 2025</span>
+            <h3 class="project-wrapper__text-title">Predictive Maintenance for Aircraft Engines</h3>
+            <p class="project-subtitle">Remaining Useful Life (RUL) estimation with deep learning</p>
+            <p class="mb-4">
+              An end-to-end predictive maintenance system estimating the Remaining Useful
+              Life of aircraft turbofan engines, using NASA's C-MAPSS dataset and a stacked
+              LSTM architecture on multivariate sensor time-series data.
+            </p>
+            <ul class="project-highlights">
+              <li>Preprocessed and merged all four NASA C-MAPSS datasets (FD001–FD004)</li>
+              <li>Engineered RUL labels and sliding-window temporal sequences</li>
+              <li>Designed and trained a stacked LSTM for RUL regression</li>
+              <li>Built an interactive Dash/Plotly dashboard for live prediction</li>
+            </ul>
+            <p class="project-stack"><strong>Stack:</strong> Python, TensorFlow, Keras, Pandas, NumPy, Scikit-Learn, Dash, Plotly, LSTM</p>
+            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
+              See Live
+            </a>
+            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
+              Source Code
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image load-hidden">
+            <a rel="noreferrer" href="#!" target="_blank">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                <img alt="Predictive maintenance dashboard preview" class="img-fluid" src="assets/project-rul.jpg" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /END Project 3 -->
+
+      <!-- Project 4 -->
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <div class="project-wrapper__text load-hidden">
+            <span class="project-tag">Academic project &middot; Winter 2024</span>
+            <h3 class="project-wrapper__text-title">Mechanical Design &amp; 3D Printing</h3>
+            <p class="project-subtitle">Horizontal-Axis Wind Turbine (HAWT) scale model</p>
+            <p class="mb-4">
+              Designed and 3D-printed a scale model of a horizontal-axis wind turbine using
+              SolidWorks 2023, covering the full engineering design cycle: research,
+              functional analysis (SADT &amp; FAST), CAD modeling, technical drawings, and
+              basic RDM stress analysis.
+            </p>
+            <ul class="project-highlights">
+              <li>Modeled foundation, mast, hub, airfoil blades (loft), and nacelle</li>
+              <li>Techniques: Boss-Extrude, Revolve, Loft, Shell, Mirror, Cut-Extrude, virtual assembly</li>
+              <li>Delivered a full drawing package: 5 definition drawings + 1 assembly drawing</li>
+            </ul>
+            <p class="project-stack"><strong>Stack:</strong> SolidWorks 2023, 3D Printing</p>
+            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
+              Project Gallery
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+          <div class="project-wrapper__image load-hidden">
+            <a rel="noreferrer" href="#!" target="_blank">
+              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                <img alt="Wind turbine 3D print preview" class="img-fluid" src="assets/project-hawt.jpg" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /END Project 4 -->
+
+    </div>
+  </section>
+  <!-- /END Projects Section -->
+
+  <!-- **** Internships Section **** -->
+  <section id="internships">
+    <div class="container">
+      <h2 class="section-title load-hidden">Professional Engineering Internships</h2>
+
+      <div class="internship-card load-hidden">
+        <div class="internship-card__header">
+          <div>
+            <h3 class="internship-card__title">3D Development Engineer / Intern</h3>
+            <p class="internship-card__company">LRT Innovation Labs</p>
+          </div>
+          <span class="internship-card__date">April – August 2026</span>
+        </div>
+        <p class="internship-card__role">
+          Reverse engineering and PLM management for automotive exhaust system components
+          (pipes, manifolds, catalytic converters).
+        </p>
+        <ul class="project-highlights">
+          <li>3D-scanned 250+ automotive parts (EinScan Pro 2X Plus) and rebuilt parametric CAD models in Fusion 360 for bending, draft, and manufacturability analysis</li>
+          <li>Ran Fusion 360 simulations to validate tooling designs before physical prototyping, cutting iteration cycles and material waste</li>
+          <li>Migrated parts inventory and PLM workflows from Excel into a structured Odoo system, improving traceability and retrieval time</li>
+          <li>Built a Fusion 360 add-in (Python + Fusion 360 API + openpyxl) automating centerline extraction and XYZ/CLR export — eliminating 40+ minutes of manual work per part</li>
+        </ul>
+        <p class="project-stack"><strong>Tools:</strong> Fusion 360, EinScan Pro 2X Plus, Python, openpyxl, Odoo</p>
+      </div>
+
+      <div class="internship-card load-hidden">
+        <div class="internship-card__header">
+          <div>
+            <h3 class="internship-card__title">Production Process Optimization &amp; Time Study Analysis</h3>
+            <p class="internship-card__company">Coats Industrial Tunisia</p>
+          </div>
+          <span class="internship-card__date">August 2025</span>
+        </div>
+        <p class="internship-card__role">
+          4-week internship evaluating material and human flow in the dyeing department.
+        </p>
+        <ul class="project-highlights">
+          <li>Mapped the full production process from raw thread to finished product</li>
+          <li>Ran time studies on 20 operational steps across 4 dyeing machines</li>
+          <li>Identified bottlenecks in machine loading (~4 min) and chemical preparation (~2.4 min) — 37% of cycle time</li>
+          <li>Trained on SAP, C2Master, and ColorStitch; proposed changes with an estimated 10–15% lead-time reduction</li>
+        </ul>
+        <p class="project-stack"><strong>Key skills:</strong> Industrial time study, Lean manufacturing, SAP, process documentation, quality control</p>
+        <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">Full report (French) →</a>
+      </div>
+
+    </div>
+  </section>
+  <!-- /END Internships Section -->
+
+  <!-- **** Certificates Section **** -->
+  <section id="certificates">
+    <div class="container">
+      <h2 class="section-title load-hidden">Certificates &amp; Achievements</h2>
+      <p class="section-subtitle load-hidden">
+        Add your certificates here — each card can link to a PDF or credential URL.
+      </p>
+      <div class="certificates-grid">
+        <div class="certificate-card load-hidden">
+          <i class="fa fa-certificate"></i>
+          <h3>Certificate Title</h3>
+          <p>Issuing organization &middot; Year</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">View credential</a>
+        </div>
+        <div class="certificate-card load-hidden">
+          <i class="fa fa-certificate"></i>
+          <h3>Certificate Title</h3>
+          <p>Issuing organization &middot; Year</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">View credential</a>
+        </div>
+        <div class="certificate-card load-hidden">
+          <i class="fa fa-certificate"></i>
+          <h3>Certificate Title</h3>
+          <p>Issuing organization &middot; Year</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">View credential</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /END Certificates Section -->
+
+  <!-- **** Contact Section **** -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-wrapper load-hidden">
+        <p class="contact-wrapper__text">
+          Open to engineering internships, research collaborations, and scholarship
+          programs like Mitacs — feel free to reach out.
+        </p>
+        <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:Aziz.moualhi@insat.ucar.tn">
+          Say hello
+        </a>
+        <div class="contact-details">
+          <a href="mailto:Aziz.moualhi@insat.ucar.tn"><i class="fa fa-envelope"></i> Aziz.moualhi@insat.ucar.tn</a>
+          <a href="tel:+21629742817"><i class="fa fa-phone"></i> +216 29 742 817</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /END Contact Section -->
+
+  <!-- **** Footer Section **** -->
+  <footer class="footer navbar-static-bottom">
+    <div class="container footer__wrapper">
+      <p>&copy; <span id="year"></span> Aziz Moualhi. Built with the Simplefolio template.</p>
+      <div class="social-links">
+        <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noreferrer">
+          <i class="fa fa-github fa-inverse"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noreferrer">
+          <i class="fa fa-linkedin fa-inverse"></i>
+        </a>
+        <a href="mailto:Aziz.moualhi@insat.ucar.tn">
+          <i class="fa fa-envelope fa-inverse"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- /END Footer Section -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
