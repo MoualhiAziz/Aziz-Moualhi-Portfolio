@@ -34,3 +34,17 @@ if (window.VanillaTilt) {
     "max-glare": 0.5,
   });
 }
+// Typewriter effect for the hero title
+const typewriterEl = document.getElementById("typewriter");
+if (typewriterEl) {
+  const fullText = "Hey, I'm Aziz!";
+  let i = 0;
+  function typeNext() {
+    if (i <= fullText.length) {
+      typewriterEl.textContent = fullText.slice(0, i);
+      i++;
+      setTimeout(typeNext, 80); // typing speed — lower = faster
+    }
+  }
+  typeNext();
+}

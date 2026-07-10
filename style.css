@@ -2,16 +2,17 @@
    Variables — change these two to re-theme the whole site
    ========================================================================== */
 :root {
-  --main-color: #02aab0;
-  --secondary-color: #00cdac;
-  --bg-color: #0b1220;
+  --main-color: #f0dd5f;
+  --secondary-color: #ffc700;
+  --bg-color: #2c5b58;
   --bg-color-alt: #0f1830;
-  --text-color: #e7ecf5;
-  --text-muted: #9aa6bd;
-  --card-bg: #131c34;
-  --border-color: #212c48;
+  --text-color: #f0dd5f;
+  --text-muted: #f3f2ef;
+  --card-bg: rgba(19, 28, 52, 0.72);
+  --border-color: #173935;
+  --title-color: #f0dd5f;
   --radius: 14px;
-  --max-width: 1100px;
+  --max-width: 1200px;
   --gradient: linear-gradient(135deg, var(--main-color), var(--secondary-color));
 }
 
@@ -25,13 +26,41 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   line-height: 1.65;
+  position: relative;
 }
 
+/* Fixed cutting-mat background image, dimmed so text stays readable.
+   File goes in assets/cutting-mat-bg.avif — supported in all current
+   browsers (Chrome/Edge/Firefox and Safari 16+). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20px; /* extend past edges so blur doesn't reveal a border */
+  z-index: -2;
+  background-image: url("assets/cutting-mat-bg.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(px);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(4, 10, 7, 0.35);
+}
+
+
 h1, h2, h3 {
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
+  color: var(--title-color);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 a { text-decoration: none; color: inherit; }
@@ -50,8 +79,8 @@ section { padding: 110px 0; border-bottom: 1px solid var(--border-color); }
 section:last-of-type { border-bottom: none; }
 
 .section-title {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  margin-bottom: 12px;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin-bottom: 20px;
 }
 .section-subtitle {
   color: var(--text-muted);
@@ -100,7 +129,7 @@ section:last-of-type { border-bottom: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 18, 32, 0.85);
+  background: #08111d7a;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
 }
@@ -110,18 +139,22 @@ section:last-of-type { border-bottom: none; }
   justify-content: space-between;
   height: 68px;
 }
-.navbar__logo {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 1.3rem;
+.navbar__logo img {
+  height: 68px;
+  width: 68px;
+  display: block;
+  object-fit: cover;
+  padding: 2px;
 }
 .navbar__logo span { color: var(--main-color); }
 .navbar__links {
+  font-family: "Playfair Display", serif;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 35px;
 }
 .navbar__links a:not(.cta-btn) {
+  font-family: "Playfair Display", serif;
   font-size: 0.92rem;
   color: var(--text-muted);
   transition: color 0.2s ease;
@@ -148,11 +181,12 @@ section:last-of-type { border-bottom: none; }
 .jumbotron {
   padding: 160px 0 120px;
   border-bottom: 1px solid var(--border-color);
-  background:
-    radial-gradient(600px circle at 15% 20%, rgba(2, 170, 176, 0.18), transparent 60%),
-    radial-gradient(500px circle at 85% 30%, rgba(0, 205, 172, 0.12), transparent 60%);
 }
-.hero__inner { max-width: 760px; }
+.hero__inner {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
 .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -162,29 +196,105 @@ section:last-of-type { border-bottom: none; }
   font-weight: 600;
 }
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  margin-bottom: 22px;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  margin-bottom: 14px;
+  color: var(--title-color);
 }
 .hero-subtitle {
-  font-size: 1.08rem;
-  color: var(--text-muted);
-  max-width: 620px;
-  margin-bottom: 34px;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: #f3f2ef;
+  max-width: 780px;
+  margin: 0 auto 34px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+.hero__inner::before {
+  content: "";
+  position: absolute;
+  inset: -40px -60px;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(41, 59, 50, 0.534) 0%,
+    rgba(4, 10, 7, 0) 70%
+  );
+}
+.hero__inner {
+  text-align: center;
+  margin: 0 auto;
+}
+.hero__avatar {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 28px;
+  cursor: pointer;
+}
+.hero__avatar img {
+  position: absolute;
+  inset: 0;
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.avatar-wink {
+  opacity: 0;
+  width: 220px;
+  height: 220px;
+}
+.hero__avatar:hover .avatar-default {
+  opacity: 0;
+  transform: rotate(8deg);
+  width: 220px;
+  height: 220px;
+}
+.hero__avatar:hover .avatar-wink {
+  opacity: 1;
+  transform: rotate(8deg);
+  width: 220px;
+  height: 220px;
+}
+.hero-institute {
+  font-family: "Playfair Display", serif;
+  color: #f3f2ef;
+  font-size: 1.15rem;
+  line-height: 0.5;
+  margin: 0 auto 22px;
+  max-width: 780px;
+}
+.hero-role {
+  font-family: "Baloo 2", sans-serif;
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+.hero-cta { text-align: center; }
 
 /* ==========================================================================
    About
    ========================================================================== */
 .about-wrapper { align-items: center; }
-.about-wrapper__image img {
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+.about-hero-img {
   width: 100%;
-  max-width: 340px;
+  max-width: 420px;
+  object-fit: contain;
+  /* Illustration usually looks best without a hard crop/border —
+     remove the drop-shadow line below if your artwork already has its own background. */
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45));
 }
-.about-wrapper__info-text { color: var(--text-muted); margin-bottom: 18px; }
+.about-wrapper__info-text { color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 22px; }
 .about-wrapper__links { flex-wrap: wrap; gap: 4px; }
 
 /* ==========================================================================
@@ -200,7 +310,7 @@ section:last-of-type { border-bottom: none; }
 .row:last-child { margin-bottom: 0; }
 .col-md-6 { flex: 1 1 320px; }
 .col-lg-4 { flex: 1 1 320px; }
-.col-lg-8 { flex: 2 1 460px; }
+.col-lg-8 { flex: 3 1 560px; }
 
 /* ==========================================================================
    Projects
@@ -212,16 +322,27 @@ section:last-of-type { border-bottom: none; }
   letter-spacing: 0.08em;
   color: var(--main-color);
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
+  color: #e7fefe;
 }
-.project-wrapper__text-title { font-size: 1.5rem; margin-bottom: 6px; }
-.project-subtitle { color: var(--text-muted); font-style: italic; margin: 0 0 14px; }
+.project-wrapper__text-title {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  color: #e7fefe;
+} .project-subtitle {
+  font-family: "Baloo 2", sans-serif;
+  color: var(--title-color);
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 14px;
+  color: #e7fefe;
+}
 .project-highlights { margin: 14px 0; }
 .project-highlights li {
   position: relative;
   padding-left: 20px;
   margin-bottom: 8px;
-  color: var(--text-muted);
+  color: #f3f2ef;
   font-size: 0.95rem;
 }
 .project-highlights li::before {
@@ -235,25 +356,32 @@ section:last-of-type { border-bottom: none; }
   background: var(--gradient);
 }
 .project-stack { font-size: 0.9rem; color: var(--text-muted); margin: 14px 0 18px; }
-.project-stack strong { color: var(--text-color); }
-
+.project-stack strong { color: var(--text-muted); }
+.mb-4 {
+  color: #f3f2ef;
+}
 .project-wrapper__image .thumbnail {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border-color);
   background: var(--card-bg);
-  aspect-ratio: 16 / 9.5;
+  aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .project-wrapper__image img { width: 100%; height: 100%; object-fit: cover; }
-
+.project-wrapper__image {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
 /* ==========================================================================
    Internships
    ========================================================================== */
 .internship-card {
   background: var(--card-bg);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 32px;
@@ -267,8 +395,24 @@ section:last-of-type { border-bottom: none; }
   gap: 10px;
   margin-bottom: 14px;
 }
+.internship-card__image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 20px;
+  aspect-ratio: 16 / 8.5;
+}
+.internship-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .internship-card__title { font-size: 1.25rem; margin-bottom: 4px; }
-.internship-card__company { color: var(--main-color); font-weight: 600; margin: 0; }
+.internship-card__company {
+  font-family: "Baloo 2", sans-serif;
+  color: var(--title-color);
+  font-weight: 700;
+  margin: 0;
+}
 .internship-card__date {
   font-size: 0.85rem;
   color: var(--text-muted);
@@ -289,6 +433,7 @@ section:last-of-type { border-bottom: none; }
 }
 .certificate-card {
   background: var(--card-bg);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 28px;
@@ -364,7 +509,7 @@ section:last-of-type { border-bottom: none; }
     top: 68px;
     left: 0;
     right: 0;
-    background: var(--bg-color-alt);
+    background:#08111d7a;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 24px;
@@ -373,4 +518,13 @@ section:last-of-type { border-bottom: none; }
     display: none;
   }
   .navbar__links.is-open { display: flex; }
+}
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.9s step-end infinite;
+  color: var(--title-color);
+}
+@keyframes blink {
+  50% { opacity: 0; }
 }

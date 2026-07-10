@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/about-hero.png" />
 
   <title>Aziz Moualhi | Engineering Student &amp; AI Enthusiast</title>
   <meta name="keywords" content="Aziz Moualhi, engineering, AI, machine learning, industrial maintenance, embedded systems, robotics, portfolio" />
@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -21,7 +21,8 @@
   <!-- **** Navbar **** -->
   <nav class="navbar">
     <div class="container navbar__wrapper">
-      <a href="#hero" class="navbar__logo">AM<span>.</span></a>
+      <a href="#hero" class="navbar__logo">
+      <img src="assets/avatar-wink.png" alt="Aziz Moualhi logo" /></a>
       <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -38,18 +39,24 @@
   <!-- /END Navbar -->
 
   <!-- **** Hero Section **** -->
-  <section id="hero" class="jumbotron">
+ <section id="hero" class="jumbotron">
     <div class="container hero__inner">
-      <p class="hero-eyebrow load-hidden">Engineering Student &middot; INSAT</p>
+      <div class="hero__avatar load-hidden">
+       <img class="avatar-default" src="assets/about-hero.png" alt="Illustrated avatar of Aziz Moualhi" />
+       <img class="avatar-wink" src="assets/avatar-wink.png" alt="" />
+      </div>
       <h1 class="hero-title load-hidden">
-        Hi, I'm <span class="text-color-main">Aziz Moualhi</span>
-        <br />
-        I design intelligent engineering systems.
+       <span id="typewriter"></span><span class="typewriter-cursor">|</span>
       </h1>
+      <p class="hero-institute load-hidden">
+        National Institute of Applied Science and Technology
+      <p class="hero-institute load-hidden">
+        Industrial Instrumentation and Maintenance
+      </p>
+      <p class="hero-role load-hidden">Engineering Student</p>
       <p class="hero-subtitle load-hidden">
-        I work at the intersection of machine learning, industrial maintenance,
-        embedded control, and renewable energy — turning sensor data and CAD models
-        into systems that detect, predict, and prevent failure.
+        I design intelligent engineering systems at the intersection of machine learning, industrial
+        maintenance, embedded control, and renewable energy.
       </p>
       <p class="hero-cta load-hidden">
         <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#projects">See my work</a>
@@ -67,9 +74,9 @@
         <div class="col-md-6 col-sm-12">
           <div class="about-wrapper__image load-hidden">
             <img
-              alt="Profile picture of Aziz Moualhi"
-              class="img-fluid rounded shadow-lg"
-              src="assets/profile.jpg"
+              alt="Hero illustration designed by Aziz Moualhi"
+              class="img-fluid about-hero-img"
+              src="assets/azizirl.jpg"
             />
           </div>
         </div>
@@ -79,21 +86,19 @@
               I'm an Industrial Instrumentation and Maintenance engineering student at the
               <strong>National Institute of Applied Science and Technology (INSAT)</strong>.
               I build end-to-end systems that combine deep learning, computer vision, and
-              hands-on mechanical and industrial engineering — from drone-based solar panel
-              inspection to predictive maintenance for aircraft engines.
+              hands-on mechanical and industrial engineering.
             </p>
             <p class="about-wrapper__info-text">
               I've applied this across academic projects, personal builds, and two engineering
-              internships, working with tools like PyTorch, YOLO, Fusion 360, and industrial ERP
+              internships, working with tools like PyTorch, YOLO and industrial ERP
               systems. I'm currently looking for research and engineering internship opportunities
-              (including programs like <strong>Mitacs</strong>) where I can keep working on
-              applied AI for industrial and energy systems.
+              where I can keep working on applied AI for industrial and energy systems.
             </p>
             <span class="d-flex mt-3 about-wrapper__links">
               <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="assets/resume.pdf">
                 View Resume
               </a>
-              <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE">
+              <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--ghost" href="https://www.linkedin.com/in/aziz-moualhi/">
                 LinkedIn Profile
               </a>
             </span>
@@ -128,11 +133,12 @@
               <li>Dashboard: bounding boxes, confidence scores, severity levels, maintenance recommendations</li>
             </ul>
             <p class="project-stack"><strong>Stack:</strong> Python, PyTorch, Ultralytics YOLO, Flask, Torchvision</p>
-            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
-              Google Drive Demo
+            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/MoualhiAziz/SolarGuard-AI">
+              Open GitHub Repo
             </a>
-            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
-              Source Code
+              <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="assets/pfa.pdf">
+            Academic Report
+            </a>
             </a>
           </div>
         </div>
@@ -140,9 +146,14 @@
           <div class="project-wrapper__image load-hidden">
             <a rel="noreferrer" href="#!" target="_blank">
               <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
-                <img alt="SolarGuard AI dashboard preview" class="img-fluid" src="assets/project-solarguard.jpg" />
+                <img alt="SolarGuard AI dashboard preview" class="img-fluid" src="assets/newdashrgb.png" />
               </div>
             </a>
+            <a rel="noreferrer" href="#!" target="_blank">
+            <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+              <img alt="defect project preview, second view" class="img-fluid" src="assets/ThermalExample.png" />
+          </div>
+        </a>
           </div>
         </div>
       </div>
@@ -167,26 +178,69 @@
               <li>Deployed as a Flask web UI with real-time inference</li>
             </ul>
             <p class="project-stack"><strong>Stack:</strong> Python, TensorFlow/Keras, OpenCV, NumPy, Flask, Git</p>
-            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
-              See Live
-            </a>
-            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
-              Source Code
-            </a>
+           <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/MoualhiAziz/Industrial-Defect-Inspection-CNN-Autoencoder-Explainable-Heatmaps/tree/main">
+              Open GitHub Repo
+           </a>
+
           </div>
         </div>
-        <div class="col-lg-8 col-sm-12">
-          <div class="project-wrapper__image load-hidden">
-            <a rel="noreferrer" href="#!" target="_blank">
-              <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
-                <img alt="Defect inspection heatmap preview" class="img-fluid" src="assets/project-defect.jpg" />
-              </div>
-            </a>
+       <div class="col-lg-8 col-sm-12">
+        <div class="project-wrapper__image load-hidden">
+          <a rel="noreferrer" href="#!" target="_blank">
+            <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+              <img alt="defect project dashboard preview" class="img-fluid" src="assets/project-defect1.png" />
+            </div>
+          </a>
+          <a rel="noreferrer" href="#!" target="_blank">
+            <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+              <img alt="defect project preview, second view" class="img-fluid" src="assets/project-defect.png" />
           </div>
-        </div>
+        </a>
+      </div>
+    </div>
       </div>
       <!-- /END Project 2 -->
-
+  <!-- Project 4: PipeAutomation -->
+  <div class="row">
+    <div class="col-lg-4 col-sm-12">
+      <div class="project-wrapper__text load-hidden">
+        <span class="project-tag">Engineering internship project &middot; Summer 2026</span>
+        <h3 class="project-wrapper__text-title">PipeAutomation</h3>
+        <p class="project-subtitle">Automated Pipe Reverse Engineering for Fusion 360</p>
+        <p class="mb-4">
+          A Fusion 360 Python add-in that automates the pipe reverse engineering
+          workflow — extracting centerline geometry, calculating bend parameters, and
+          generating machine-ready instructions for THOMAN bending machines. Cuts
+          per-pipe processing time from 10 minutes to 5 seconds.
+        </p>
+        <ul class="project-highlights">
+          <li>Automatically extracts centerline geometry from Fusion 360 sketches</li>
+          <li>Calculates bend parameters — length, rotation, bend angle</li>
+          <li>Generates machine-ready instructions for THOMAN bending machines</li>
+          <li>120x speed improvement (10 min → ~5 sec per pipe) with zero transcription errors</li>
+        </ul>
+        <p class="project-stack"><strong>Stack:</strong> Python, Autodesk Fusion 360 API, openpyxl</p>
+        <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/MoualhiAziz/Pipe-Reverse-Engineering-Workflow-Automation-Using-Fusion-360-API">
+          Open GitHub Repo
+        </a>
+        <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="assets/intership_report_compressed.pdf">
+         Academic Report
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-8 col-sm-12">
+      <div class="project-wrapper__image load-hidden">
+        <a rel="noreferrer" href="#!" target="_blank">
+          <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+            class="thumbnail rounded js-tilt">
+            <img alt="PipeAutomation Fusion 360 add-in preview" class="img-fluid"
+              src="assets/project-pipeautomation.jpg" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- /END Project 4 -->
       <!-- Project 3 -->
       <div class="row">
         <div class="col-lg-4 col-sm-12">
@@ -207,18 +261,16 @@
             </ul>
             <p class="project-stack"><strong>Stack:</strong> Python, TensorFlow, Keras, Pandas, NumPy, Scikit-Learn, Dash, Plotly, LSTM</p>
             <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
-              See Live
+              Open GitHub Repo
             </a>
-            <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
-              Source Code
-            </a>
+            
           </div>
         </div>
         <div class="col-lg-8 col-sm-12">
           <div class="project-wrapper__image load-hidden">
             <a rel="noreferrer" href="#!" target="_blank">
               <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
-                <img alt="Predictive maintenance dashboard preview" class="img-fluid" src="assets/project-rul.jpg" />
+                <img alt="Predictive maintenance dashboard preview" class="img-fluid" src="assets/project-rul.png" />
               </div>
             </a>
           </div>
@@ -245,16 +297,14 @@
               <li>Delivered a full drawing package: 5 definition drawings + 1 assembly drawing</li>
             </ul>
             <p class="project-stack"><strong>Stack:</strong> SolidWorks 2023, 3D Printing</p>
-            <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="#!">
-              Project Gallery
-            </a>
+            
           </div>
         </div>
         <div class="col-lg-8 col-sm-12">
           <div class="project-wrapper__image load-hidden">
             <a rel="noreferrer" href="#!" target="_blank">
               <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
-                <img alt="Wind turbine 3D print preview" class="img-fluid" src="assets/project-hawt.jpg" />
+                <img alt="Wind turbine 3D print preview" class="img-fluid" src="assets/project-hawt.png" />
               </div>
             </a>
           </div>
@@ -272,6 +322,9 @@
       <h2 class="section-title load-hidden">Professional Engineering Internships</h2>
 
       <div class="internship-card load-hidden">
+        <div class="internship-card__image">
+          <img src="assets/internship-lrt.png" alt="LRT Innovation Labs internship work" />
+        </div>
         <div class="internship-card__header">
           <div>
             <h3 class="internship-card__title">3D Development Engineer / Intern</h3>
@@ -310,7 +363,7 @@
           <li>Trained on SAP, C2Master, and ColorStitch; proposed changes with an estimated 10–15% lead-time reduction</li>
         </ul>
         <p class="project-stack"><strong>Key skills:</strong> Industrial time study, Lean manufacturing, SAP, process documentation, quality control</p>
-        <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">Full report (French) →</a>
+        <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="assets/Rapport_Stage_Ete_2025_IMI3_Moualhi_Aziz   _compressed.pdf">Full report (French) →</a>
       </div>
 
     </div>
@@ -322,26 +375,27 @@
     <div class="container">
       <h2 class="section-title load-hidden">Certificates &amp; Achievements</h2>
       <p class="section-subtitle load-hidden">
-        Add your certificates here — each card can link to a PDF or credential URL.
+    
       </p>
       <div class="certificates-grid">
         <div class="certificate-card load-hidden">
           <i class="fa fa-certificate"></i>
-          <h3>Certificate Title</h3>
-          <p>Issuing organization &middot; Year</p>
+          <h3>SOLIDWORKS CAD Design Associate</h3>
+          <p>Dassault Systèmes &middot; 2025</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="assets/certificate-me_unlocked.pdf">View credential</a>
+        </div>
+        <div class="certificate-card load-hidden">
+          <i class="fa fa-certificate"></i>
+          <h3>Letters of Recommendation</h3>
+          <p>INSAT &amp; industry supervisors &middot; 2024-2026 </p>
           <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">View credential</a>
         </div>
         <div class="certificate-card load-hidden">
           <i class="fa fa-certificate"></i>
-          <h3>Certificate Title</h3>
-          <p>Issuing organization &middot; Year</p>
-          <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">View credential</a>
-        </div>
-        <div class="certificate-card load-hidden">
-          <i class="fa fa-certificate"></i>
-          <h3>Certificate Title</h3>
-          <p>Issuing organization &middot; Year</p>
-          <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">View credential</a>
+          <h3>Game Dev Hackathon — 2nd Place🏆</h3>
+          <p>Team project: Dreamweaver &middot; 2025</p>
+          <a rel="noreferrer" target="_blank" class="cta-btn text-color-main"
+            href="https://github.com/MoualhiAziz/platformer">View GitHub Repo</a>
         </div>
       </div>
     </div>
@@ -355,14 +409,17 @@
       <div class="contact-wrapper load-hidden">
         <p class="contact-wrapper__text">
           Open to engineering internships, research collaborations, and scholarship
-          programs like Mitacs — feel free to reach out.
+          programs — feel free to reach out 😉.
         </p>
         <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:Aziz.moualhi@insat.ucar.tn">
           Say hello
         </a>
         <div class="contact-details">
+          <a href="mailto:AzizMouelhi26@gmail.com"><i class="fa fa-envelope"></i> AzizMouelhi26@gmail.com</a>
           <a href="mailto:Aziz.moualhi@insat.ucar.tn"><i class="fa fa-envelope"></i> Aziz.moualhi@insat.ucar.tn</a>
           <a href="tel:+21629742817"><i class="fa fa-phone"></i> +216 29 742 817</a>
+          <a href="https://www.linkedin.com/in/aziz-moualhi" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/MoualhiAziz" target="_blank" rel="noreferrer"><i class="fa fa-github"></i> GitHub</a>
         </div>
       </div>
     </div>
@@ -372,12 +429,12 @@
   <!-- **** Footer Section **** -->
   <footer class="footer navbar-static-bottom">
     <div class="container footer__wrapper">
-      <p>&copy; <span id="year"></span> Aziz Moualhi. Built with the Simplefolio template.</p>
+      <p>&copy; <span id="year"></span> Aziz Moualhi.</p>
       <div class="social-links">
-        <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noreferrer">
+        <a href="https://github.com/MoualhiAziz" target="_blank" rel="noreferrer">
           <i class="fa fa-github fa-inverse"></i>
         </a>
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/aziz-moualhi/" target="_blank" rel="noreferrer">
           <i class="fa fa-linkedin fa-inverse"></i>
         </a>
         <a href="mailto:Aziz.moualhi@insat.ucar.tn">
