@@ -16,7 +16,14 @@
   --gradient: linear-gradient(135deg, var(--main-color), var(--secondary-color));
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
 
 html { scroll-behavior: smooth; }
 
@@ -365,7 +372,7 @@ section:last-of-type { border-bottom: none; }
   overflow: hidden;
   border: 1px solid var(--border-color);
   background: var(--card-bg);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 8.5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -517,8 +524,26 @@ section:last-of-type { border-bottom: none; }
     border-bottom: 1px solid var(--border-color);
     display: none;
   }
-  .navbar__links.is-open { display: flex; }
-}
+ .navbar__links.is-open {
+   display: flex;
+ }
+
+ .hero-institute {
+   line-height: 1.3;
+ }
+ .hero__avatar,
+ .hero__avatar img,
+ .avatar-wink,
+ .hero__avatar:hover .avatar-default,
+ .hero__avatar:hover .avatar-wink {
+   width: 160px;
+   height: 160px;
+ }
+ .navbar__logo img {
+   height: 44px;
+   width: 44px;
+ }
+ }
 .typewriter-cursor {
   display: inline-block;
   margin-left: 2px;
