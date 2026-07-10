@@ -524,6 +524,11 @@ section:last-of-type { border-bottom: none; }
     border-bottom: 1px solid var(--border-color);
     display: none;
   }
+     body::before {
+       inset: 0;
+       background-attachment: scroll;
+       background-size: cover;
+     }
  .navbar__links.is-open {
    display: flex;
  }
