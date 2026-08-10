@@ -429,7 +429,19 @@ section:last-of-type { border-bottom: none; }
   padding: 5px 14px;
 }
 .internship-card__role { color: var(--text-muted); margin-bottom: 10px; }
-
+/* ==========================================================================
+   Tech Stack
+   ========================================================================== */
+.tech-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tech-stack-grid img {
+  height: 32px;
+  width: auto;
+  border-radius: 6px;
+}
 /* ==========================================================================
    Certificates
    ========================================================================== */
