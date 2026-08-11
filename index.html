@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -30,6 +31,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#internships">Internships</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="assets/resume.pdf" target="_blank" rel="noreferrer" class="cta-btn cta-btn--nav">Resume</a></li>
@@ -373,41 +375,28 @@
     </div>
   </section>
   <!-- /END Internships Section -->
- <!-- **** Tech Stack Section **** -->
-  <section id="tech-stack">
+  
+<!-- **** Skills Section **** -->
+  <section id="skills">
     <div class="container">
-      <h2 class="section-title load-hidden">Tech Stack</h2>
-      <div class="tech-stack-grid load-hidden">
-        <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C" />
-        <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-        <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" />
-        <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-        <img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white" alt="Keras" />
-        <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch" />
-        <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" />
-        <img src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
-        <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-        <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-        <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-        <img src="https://img.shields.io/badge/PlatformIO-%23222.svg?style=for-the-badge&logo=platformio&logoColor=%23f5822a" alt="PlatformIO" />
-        <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-        <img src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" />
-        <img src="https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
-        <img src="https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white" alt="Unreal Engine" />
-        <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino" />
-        <img src="https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=for-the-badge&logo=godot-engine" alt="Godot Engine" />
-        <img src="https://img.shields.io/badge/ESP32-000000?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
-        <img src="https://img.shields.io/badge/LabVIEW-FFDB00?style=for-the-badge&logo=labview&logoColor=black" alt="LabVIEW" />
-        <img src="https://img.shields.io/badge/Ladder%20Logic-4B4B4B?style=for-the-badge" alt="Ladder Logic" />
-        <img src="https://img.shields.io/badge/GRAFCET-4B4B4B?style=for-the-badge" alt="GRAFCET" />
+      <h2 class="section-title load-hidden">My Top Skills</h2>
+      <div class="skills-grid load-hidden">
+        <div class="skill-card" style="--accent:#3776AB;"><span class="skill-icon"><i class="fa-brands fa-python"></i></span><span>Python</span></div>
+        <div class="skill-card" style="--accent:#EE4C2C;"><span class="skill-icon"><i class="fa-solid fa-brain"></i></span><span>AI &amp; Deep Learning</span></div>
+        <div class="skill-card" style="--accent:#5C3EE8;"><span class="skill-icon"><i class="fa-solid fa-eye"></i></span><span>Computer Vision</span></div>
+        <div class="skill-card" style="--accent:#f0dd5f;"><span class="skill-icon"><i class="fa-solid fa-chart-line"></i></span><span>Predictive Maintenance</span></div>
+        <div class="skill-card" style="--accent:#E2211C;"><span class="skill-icon"><i class="fa-solid fa-cube"></i></span><span>SolidWorks &amp; CAD</span></div>
+        <div class="skill-card" style="--accent:#F76300;"><span class="skill-icon"><i class="fa-solid fa-shapes"></i></span><span>Fusion 360</span></div>
+        <div class="skill-card" style="--accent:#00979D;"><span class="skill-icon"><i class="fa-solid fa-microchip"></i></span><span>Embedded Systems</span></div>
+        <div class="skill-card" style="--accent:#FFC700;"><span class="skill-icon"><i class="fa-solid fa-bolt"></i></span><span>Electrical Engineering</span></div>
+        <div class="skill-card" style="--accent:#4EA8DE;"><span class="skill-icon"><i class="fa-solid fa-diagram-project"></i></span><span>PLC &amp; Ladder Logic</span></div>
+        <div class="skill-card" style="--accent:#FFDB00;"><span class="skill-icon"><i class="fa-solid fa-wave-square"></i></span><span>LabVIEW</span></div>
+        <div class="skill-card" style="--accent:#6FCF97;"><span class="skill-icon"><i class="fa-solid fa-gears"></i></span><span>GRAFCET &amp; Automation</span></div>
+        <div class="skill-card" style="--accent:#00979D;"><span class="skill-icon"><i class="fa-brands fa-square-git"></i></span><span>C / C++</span></div>
       </div>
     </div>
   </section>
-  <!-- /END Tech Stack Section -->
+  <!-- /END Skills Section -->
   <!-- **** Certificates Section **** -->
   <section id="certificates">
     <div class="container">
